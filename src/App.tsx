@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 import { ChatClient } from './chat-client';
 
-const WEBSOCKET_URL = process.env.WEBSOCKET_URL
+const WEBSOCKET_URL = process.env.WEBSOCKET_URL || ''
 
 const App = () => {
   const socket = useRef<WebSocket | null>(null);
